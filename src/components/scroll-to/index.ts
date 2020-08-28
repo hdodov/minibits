@@ -26,8 +26,8 @@ export function scroll (options) {
 				end: offsetGlobal(options.target).top + offset
 			}
 		},
-		update: function () {
-			scroller.scrollTop = this.scroll
+		onUpdate: function () {
+			scroller.scrollTop = this.computed.scroll
 		}
 	}, options)
 
